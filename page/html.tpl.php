@@ -60,14 +60,23 @@
 
   <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 
-    <div id="outer-wrapper">
+    <div id="container">
       <div id="skip-link">
         <a href="#content" tabIndex="-1" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
       </div>
-      <?php print $page_top; ?>
-      <?php print $page; ?>
-      <?php print $page_bottom; ?>
-    </div>
+
+      <header>
+        <?php print $page_top; ?>
+      </header>
+
+      <div id="main" role="main">
+        <?php print $page; ?>
+      </div><!--! end of #main -->
+
+      <footer>
+        <?php print $page_bottom; ?>
+      </footer>        
+    </div><!--! end of #container -->
 
   </body>
 
