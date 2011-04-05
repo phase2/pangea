@@ -7,7 +7,7 @@ name = Pangea
 stylesheets[all][]   = css/basics.css
 
 ; CSS styles for default HTML element styling in WYSIWYG.
-stylesheets[all][]   = css/editor.css
+stylesheets[all][]   = css/wysiwyg.css
 
 ; Print-version styles
 stylesheets[print][] = css/print.css
@@ -17,7 +17,6 @@ stylesheets-conditional[lte IE 8][all][] = css/ie8_orless.css
 
 ; IE 7 and below stylesheet
 stylesheets-conditional[lte IE 7][all][] = css/ie7_orless.css
-
 
 scripts[] = js/pangea.js
 
