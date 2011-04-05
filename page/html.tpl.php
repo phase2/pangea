@@ -43,16 +43,17 @@
  */
 ?><!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?> >
-  <meta charset="utf-8">
-
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <head profile="<?php print $grddl_profile; ?>">
+
     <?php print $head; ?>
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
     <?php print $scripts; ?>
@@ -65,19 +66,24 @@
         <a href="#content" tabIndex="-1" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
       </div>
 
+
       <header>
         <?php print $page_top; ?>
+        <!-- header markup goes here-->
       </header>
 
-      <div id="main" role="main">
+      <div id="main" role="main" class="clearfix">
         <?php print $page; ?>
       </div><!--! end of #main -->
 
       <footer>
+        <!--- Footer markup goes here -->
+
         <?php print $page_bottom; ?>
       </footer>        
     </div><!--! end of #container -->
 
+  
   </body>
 
 </html>

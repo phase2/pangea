@@ -1,40 +1,6 @@
 @charset "UTF-8";
 
-/* Handy font size definitions
-font-size: .833em;   12px x .833   = 10px
-font-size: .917em;   12px x .917   = 11px
-font-size: 1em;      12px x 1      = 12px
-font-size: 1.083em   12px x 1.083  = 13px
-font-size: 1.167em;  12px x 1.167  = 14px
-font-size: 1.25em;   12px x 1.125  = 15px
-font-size: 1.417em;  12px x 1.417  = 17px
-font-size: 2em;      12px x 2       = 24px
-*/
-
 /************ Basic styles used in many places across the site *************/
-
-
-
-/** Clearfix */
-.clearfix:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
-	font-size:0;
-}
-.clearfix {
-  display: inline-block;
-}
-html[xmlns] .clearfix {
-  display: block;
-}
-* html .clearfix {
-  height: 1%;
-}
-/** End Clearfix */
 
 
 /** Accessible hidden/visible styles **/
@@ -48,7 +14,15 @@ html[xmlns] .clearfix {
   left: auto;
 }
 
-body           { margin:0; }
+html {
+  font-family: Cambria, Georgia, "Times New Roman", Times, serif;
+  font-size: 0.75em; /* 16 * 0.75 = 12 */
+  background: #fff;
+  color: #333;
+}
+
+body           {}
+
 .bold          { font-weight: bold; }
 .italic        { font-style: italic; }
 .underline     { border-bottom: 1px solid; }
@@ -78,3 +52,51 @@ span.clear     { clear: both; display: block; font-size: 0; height: 1px; line-he
 
 tbody {border: none;}
 table {border-spacing: inherit;}
+
+/*-- Sidebars ---*/
+
+#inner-wrapper {}
+#sidebar-first, #sidebar-second {width: 200px;}
+
+/*--- HEADINGS ---*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
+  line-height: 1em; /* 24px --> 24 ÷ 24 = 1 */
+}
+
+h2 {
+  font-size: 1.375em; /* 22px --> 22 ÷ 16 = 1.375 */
+  line-height: 1.0909em; /* 24px --> 24 ÷ 22 = 1.090909(09) */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px --> 20 ÷ 16 = 1.25 */
+  line-height: 1.2em; /* 24px --> 24 ÷ 20 = 1.2 */
+}
+
+h4 {
+  font-size: 1.125em; /* 18px --> 18 ÷ 16 = 1.125 */
+  line-height: 1.333em; /* 24px --> 24 ÷ 18 = 1.3333333(3) */
+}
+
+h5, h6 {
+  font-size: 1em; /* 16px --> 16 ÷ 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
+}
+
+/*---- PARAGRAPHS ----*/
+
+p {
+  margin-bottom: 24px;
+}
+
+p+p {
+  text-indent: 1em;
+  margin-top: -24px;
+}

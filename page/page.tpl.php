@@ -76,33 +76,23 @@
  * @see template_preprocess_page() 
  */
 ?>
-<?php require_once dirname(__FILE__) . '/page-header.inc'; ?>
 
+  <div id="inner-wrapper" class="float-left">
+    <?php if ($messages): ?>
+      <div id="messages"><div class="section clearfix">
+        <?php print $messages; ?>
+      </div></div> <!-- /.section, /#messages -->
+    <?php endif; ?>
 
-  <?php if ($messages): ?>
-    <div id="messages"><div class="section clearfix">
-      <?php print $messages; ?>
-    </div></div> <!-- /.section, /#messages -->
-  <?php endif; ?>
+    <?php if ($page['help']): ?>
+      <div id="help"><div class="section clearfix">
+        <?php print render($page['help']); ?>
+      </div></div> <!-- /.section, /#featured -->
+    <?php endif; ?>
 
-  <?php if ($page['help']): ?>
-    <div id="help"><div class="section clearfix">
-      <?php print render($page['help']); ?>
-    </div></div> <!-- /.section, /#featured -->
-  <?php endif; ?>
-
-  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-    <div id="breadcrumb">
-      <?php if (!empty($addthis)): ?>
-        <div id="addthis"><?php print $addthis; ?></div>
-      <?php endif; ?>
-      <?php if (!empty($breadcrumb)): ?>
-        <?php print $breadcrumb; ?>
-      <?php endif; ?>
-    </div>
-
-    <div id="content" class="column"><div class="section">
+    <div id="content" class="column">
       <a id="main-content"></a>
+
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title">
@@ -110,12 +100,14 @@
         </h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
+
       <?php if ($tabs): ?>
         <div class="tabs">
           <?php print render($tabs); ?>
         </div>
       <?php endif; ?>
-      <?php print render($page['help']); ?>
+
+
       <?php if ($action_links): ?>
         <ul class="action-links">
           <?php //print render($action_links); ?>
@@ -128,23 +120,19 @@
       <?php print render($page['content_suffix']); ?>
       <?php print $feed_icons; ?>
 
-    </div></div> <!-- /.section, /#content -->
+    </div> <!-- /#content -->
 
-  </div><!-- /#main -->
-  
-  
+   </div><!-- /#inner-wrapper -->
+
   <?php if ($page['sidebar_first']): ?>
-    <div id="sidebar-first" class="column sidebar"><div class="section">
+    <div id="sidebar-first" class="column sidebar float-left"><div class="section">
       <?php print render($page['sidebar_first']); ?>
     </div></div> <!-- /.section, /#sidebar-first -->
   <?php endif; ?>
+    
   <?php if ($page['sidebar_second']): ?>
-    <div id="sidebar-second" class="column sidebar"><div class="section">
+    <div id="sidebar-second" class="column sidebar float-left"><div class="section">
       <?php print render($page['sidebar_second']); ?>
     </div></div> <!-- /.section, /#sidebar-second -->
   <?php endif; ?>
     
-  
-  </div> <!-- /#main-wrapper -->
-
-<?php require_once dirname(__FILE__) . '/page-footer.inc'; ?>
