@@ -1,0 +1,40 @@
+core = 7.x
+description = Minimalistic and modular HTML5 base theme tailored for Drupal distributions
+name = Pangea
+
+
+; Basic styles used in many places across the site
+stylesheets[all][]   = css/basics.css
+
+; CSS styles for default HTML element styling in WYSIWYG.
+stylesheets[all][]   = css/editor.css
+
+; Print-version styles
+stylesheets[print][] = css/print.css
+
+; IE 8 and below stylesheet
+stylesheets-conditional[lte IE 8][all][] = css/ie8_orless.css
+
+; IE 7 and below stylesheet
+stylesheets-conditional[lte IE 7][all][] = css/ie7_orless.css
+
+
+scripts[] = js/pangea.js
+
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[inner_first] = First Inner Region
+regions[inner_second] = Second Inner Region
+regions[content_prefix] = On Top of Content
+regions[content] = Content
+regions[content_suffix] = Underneath the Content
+regions[header] = Header
+regions[footer] = Footer
+regions[page_top] = Page Top
+regions[page_bottom] = Page Bottom
+regions[help] = Help
+
+features[] = favicon
+features[] = main_menu
+features[] = logo
+features[] = name
