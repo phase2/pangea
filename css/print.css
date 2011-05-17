@@ -1,0 +1,11 @@
+/**
+* Two very handy print stylesheet definitions.
+* The first scales your images so they never print wider than a single sheet of 
+* paper; the second displays the URL of a link in parentheses after the a 
+* element.
+*
+* Source: http://forrst.com/posts/A_pair_of_CSS_rules_to_help_make_better_print_st-9SL
+*/
+
+img { max-width: 100%; }
+a[href]::after { content: ' (' attr(href) ')'; }
